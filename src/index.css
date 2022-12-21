@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .rc-pagination-item {
+    @apply h-8 w-8 border-2 border-primary bg-transparent rounded-full;
+  }
+  .rc-pagination-item a {
+    @apply text-primary font-semibold;
+  }
+  .rc-pagination-item:focus,
+  .rc-pagination-item:hover {
+    @apply bg-primary text-base-100 border-primary;
+  }
+  .rc-pagination-item:focus a,
+  .rc-pagination-item:hover a {
+    @apply text-base-100;
+  }
+
+  .rc-pagination-item-active {
+    @apply h-8 w-8 border-2 border-primary bg-primary rounded-full;
+  }
+  .rc-pagination-item-active a {
+    @apply text-base-100;
+  }
+  .rc-pagination-item-active:focus,
+  .rc-pagination-item-active:hover {
+    @apply bg-primary text-base-100 border-primary;
+  }
+  .rc-pagination-item-active:focus a,
+  .rc-pagination-item-active:hover a {
+    @apply text-base-100;
+  }
+
+  .rc-pagination-prev,
+  .rc-pagination-next {
+    @apply h-8 w-10 bg-primary text-base-100 rounded-md;
+  }
+  .rc-pagination-disabled {
+    @apply h-8 w-10 bg-primary text-base-100 opacity-50 rounded-md;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  /* font-family: "Quicksand", "Hind Siliguri"; */
+  font-family: "Saira", "Hind Siliguri";
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
